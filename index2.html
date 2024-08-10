@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <style>
+    .header {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      position: absolute;
+      font-weight: 100;
+      text-transform: lowercase;
+      padding: 0.25em 0 0.25em 0.5em;
+      height: 20px;
+      background-image: url('img/confetti.svg');
+    }
+
+    /* sc-component-id: sc-bwzfXH */
+    .link {
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      color: #FFF;
+    }
+
+    /* sc-component-id: sc-htpNat */
+    .banner {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 125px;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    /* sc-component-id: sc-bxivhb */
+    .banner-background {
+      -webkit-mask: radial-gradient(34.99px at 50% calc(100% - 48.00px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% calc(100% + 18.00px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+      mask: radial-gradient(34.99px at 50% calc(100% - 48.00px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%, radial-gradient(34.99px at 50% calc(100% + 18.00px), #0000 99%, #000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+      height: 20;
+      z-index: -99;
+      background: #9221ff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 0;
+      height: 100px;
+      -webkit-transform: scaleY(1.75) scaleX(1.75) skew(37deg);
+      -ms-transform: scaleY(1.75) scaleX(1.75) skew(37deg);
+      transform: scaleY(1.75) scaleX(1.75) skew(37deg);
+    }
+
+    /* sc-component-id: sc-ifAKCX */
+    .container {
+      box-sizing: border-box;
+      padding: 16px;
+      color: #fff;
+      background-color: #000;
+    }
+
+    @media screen and (min-width:576px) {
+      .container {
+        padding: 32px;
+      }
+    }
+
+    .box-sizing {
+      box-sizing: border-box;
+    }
+
+    /* sc-component-id: sc-EHOje */
+    .flex-column-center {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+
+    .flex {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    /* sc-component-id: sc-gzVnrw */
+    .font-family {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .font-family * {
+      box-sizing: border-box;
+    }
+
+    /* sc-component-id: sc-gPEVay */
+    .profile-image {
+      height: 240px;
+      object-fit: cover;
+      width: 240px;
+      border-radius: 99999px;
+      display: inline-block;
+    }
+
+    /* sc-component-id: sc-global-2838268165 */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /* sc-component-id: sc-global-3032136103 */
+    @font-face {
+      font-family: "SF Mono";
+      src: url("fonts/sfmono-light-webfont.woff") format('woff');
+    }
+
+    @font-face {
+      font-family: "Helvetica Neue";
+      font-weight: 200;
+      src: url("fonts/helveticaneue-light.woff") format('woff');
+    }
+
+    @font-face {
+      font-family: "Helvetica Neue";
+      font-weight: 400;
+      src: url("fonts/helveticaneue-medium.woff") format('woff');
+    }
+
+    @font-face {
+      font-family: "Helvetica Neue";
+      font-weight: bold;
+      src: url("fonts/helveticaneue-bold.woff") format('woff');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      margin: 0;
+    }
+
+    /* sc-component-id: sc-hEsumM */
+    .icon {
+      display: inline-block;
+      vertical-align: -.125em;
+      overflow: hidden;
+    }
+
+    /* sc-component-id: sc-cIShpX */
+    .icon-middle {
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+    }
+
+    /* sc-component-id: sc-kafWEX */
+    .icon-small {
+      display: inline-block;
+      vertical-align: -.125em;
+      overflow: hidden;
+    }
+
+    /* sc-component-id: sc-btzYZH */
+    .github-link {
+      position: relative;
+      width: 100px;
+      vertical-align: middle;
+      color: inherit;
+      height: 100px;
+      background: linear-gradient(to bottom, #dbdbdb 0, #4b4b4b 100%);
+      text-align: center;
+      border-radius: 12%;
+      padding: 5px;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .github-link:hover {
+      -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      transform: scale(1.07);
+    }
+
+    .github-link svg {
+      margin-top: -7px;
+      width: 70%;
+      height: 70%;
+    }
+
+    .calendly-link {
+      position: relative;
+      width: 100px;
+      vertical-align: middle;
+      color: inherit;
+      height: 100px;
+      background: linear-gradient(to bottom, #fb8ad4 0, #9221ff 100%);
+      text-align: center;
+      border-radius: 12%;
+      padding: 5px;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .calendly-link:hover {
+      -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      transform: scale(1.07);
+    }
+
+    .calendly-link svg {
+      margin-top: -7px;
+      width: 60%;
+      height: 60%;
+    }
+
+
+    /* sc-component-id: sc-lhVmIH */
+    .resume-link {
+      position: relative;
+      width: 100px;
+      vertical-align: middle;
+      color: inherit;
+      height: 100px;
+      background: linear-gradient(to top, #1d77ef 0, #81f3fd 100%);
+      text-align: center;
+      border-radius: 12%;
+      padding: 5px;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .resume-link:hover {
+      -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.07);
+      transform: scale(1.07);
+    }
+
+    .resume-link svg {
+      margin-top: -7px;
+      width: 70%;
+      height: 70%;
+    }
+
+    /* sc-component-id: sc-bYSBpT */
+    .github-text {
+      position: absolute;
+      bottom: 2px;
+      padding: 0;
+      left: 0;
+      right: 0;
+      font-size: 16px;
+    }
+
+    .calendly-text {
+      position: absolute;
+      bottom: 2px;
+      padding: 0;
+      left: 0;
+      right: 0;
+      font-size: 15px;
+    }
+
+    /* sc-component-id: sc-elJkPf */
+    .inline-block {
+      display: inline-block;
+      margin: 0 10px 10px 10px;
+    }
+
+    /* sc-component-id: sc-kTUwUJ */
+
+    /* sc-component-id: sc-dqBHgY */
+    .hero {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      top: 20px;
+      bottom: 0;
+      color: #FFF;
+      min-height: 720px;
+      background-image: url('img/confetti.svg'), linear-gradient(to bottom, #00ffc3 0, #0ab0ff 100%);
+    }
+
+    /* sc-component-id: sc-keyframes-bribIk */
+    @-webkit-keyframes blink {
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        visibility: hidden;
+      }
+    }
+
+    /* sc-component-id: sc-gxMtzJ */
+    .heading {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.25;
+      margin: 0px;
+      font-family: Menlo, monospace;
+      font-weight: 100;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      white-space: nowrap;
+    }
+
+    @media screen and (min-width:576px) {
+      .heading {
+        font-size: 32px;
+      }
+    }
+
+    .heading:before {
+      content: '$> ';
+    }
+
+    .heading:after {
+      content: ' ▌';
+      -webkit-animation: blink 2s step-start 0s infinite;
+      animation: blink 2s step-start 0s infinite;
+    }
+
+    /* sc-component-id: sc-dfVpRl */
+    .grid {
+      text-align: center;
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 30px;
+    }
+
+    @media (max-width:576px) {
+      .grid {
+        -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+        transform: scale(0.75);
+      }
+    }
+
+    @media (min-width:768px) {}
+
+    @media (min-width:992px) {}
+  </style>
+
+  <link rel="manifest" href="favicons/manifest.json" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
+    href="/favicons/apple-touch-startup-image-320x460.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+    href="/favicons/apple-touch-startup-image-640x920.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+    href="/favicons/apple-touch-startup-image-640x1096.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+    href="/favicons/apple-touch-startup-image-750x1294.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
+    href="/favicons/apple-touch-startup-image-1182x2208.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
+    href="/favicons/apple-touch-startup-image-1242x2148.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
+    href="/favicons/apple-touch-startup-image-748x1024.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
+    href="/favicons/apple-touch-startup-image-768x1004.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
+    href="/favicons/apple-touch-startup-image-1496x2048.png" />
+  <link rel="apple-touch-startup-image"
+    media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
+    href="/favicons/apple-touch-startup-image-1536x2008.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+  <link rel="shortcut icon" href="favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="228x228" href="favicons/coast-228x228.png" />
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png" />
+  <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
+  <link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json" />
+  <title data-react-helmet="true">Robby Polana - Full-Stack Web Application Engineer</title>
+  <style id="gatsby-inlined-css"></style>
+</head>
+
+<body>
+  <div id="___gatsby">
+    <div class="font-family" data-reactroot="">
+      <div>
+        <h1 class="header">
+          <marquee><a class="link" href="https://rbby.dev/">Robby Polana - Full-Stack Web
+              Application Engineer </a></marquee>
+        </h1>
+        <div class="banner">
+          <div class="banner-background"></div>,
+        </div>
+        <div class="hero flex-column-center container flex">
+          <img class="profile-image" src="img/me250.jpg" />
+          <h2 class="heading">Hello World</h2>
+          <div class="grid">
+            <a rel="nofollow" href="https://github.com/rbbydotdev" class="github-link"
+              to="https://github.com/robby-robby">
+              <svg viewBox="0 0 496 512" aria-hidden="true" focusable="false" fill="currentColor" class="icon">
+                <path fill="currentColor"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                </path>
+              </svg>
+              <div class="github-text" font-size="16px">Github</div>
+            </a>
+            <a rel="nofollow" href="https://calendly.com/robby/30-min-phone-call" class="calendly-link"
+              to="https://calendly.com/robby/30-min-phone-call">
+              <svg viewBox="0 0 448 512" aria-hidden="true" focusable="false" fill="currentColor" class="icon-small">
+                <path fill="currentColor"
+                  d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z">
+                </path>
+              </svg>
+              <div class="calendly-text" font-size="15px">Meet me</div>
+            </a>
+            <a rel="nofollow" class="resume-link" iconSize="70%" href="/resume">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" class="icon-middle">
+                <path
+                  d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48">
+                </path>
+              </svg>
+              <div class="github-text" font-size="16px">Resume</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
