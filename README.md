@@ -2,8 +2,8 @@
 
 ## View
 
-- `npx serve` in root
-- `python3 -m http.server`
+- `npx serve` 
+- or `python3 -m http.server`
 
 ## Edit
 
