@@ -7,16 +7,15 @@
   <style>
     .header {
       margin: 0 auto;
-      left: 0;
-      right: 0;
-      top: 0;
-      z-index: 1;
-      position: absolute;
+      /* left: 0; */
+      /* right: 0; */
+      /* top: 0; */
+      /* z-index: 1; */
+      /* position: absolute; */
       text-transform: lowercase;
       font-weight: bold;
-      padding: 0.25em 0 0.25em 0.5em;
-      height: 20px;
-      background-image: url('img/confetti.svg');
+      /* padding: 0.25em 0 0.25em 0.5em; */
+      /* height: 20px; */
     }
 
     /* sc-component-id: sc-bwzfXH */
@@ -28,11 +27,8 @@
 
     /* sc-component-id: sc-htpNat */
     .banner {
-      top: 0;
-      left: 0;
-      right: 0;
       height: 125px;
-      position: absolute;
+      position: relative;
       overflow: hidden;
     }
 
@@ -43,7 +39,7 @@
       height: 20;
       z-index: -99;
       background: #9221ff;
-      position: absolute;
+      /* position: absolute; */
       top: 0;
       left: 0;
       right: 0;
@@ -259,6 +255,15 @@
       margin: 0 10px 10px 10px;
     }
 
+    .banner-text {
+      color: #fff;
+      position: absolute;
+      z-index: 99;
+      font-size: 2rem;
+      top: 15px;
+      left: 20px;
+    }
+
     /* sc-component-id: sc-kTUwUJ */
 
     /* sc-component-id: sc-dqBHgY */
@@ -388,14 +393,14 @@
 </head>
 
 <body>
-  <div id="___gatsby">
-    <div class="font-family" data-reactroot="">
+  <div>
+    <div class="font-family">
       <div>
-        <h1 class="header">
-          <div><a class="link" href="https://rbbydotdev.github.io">rbby.dev</a></div>
-        </h1>
         <div class="banner">
-          <div class="banner-background"></div>,
+          <div class="banner-text">
+            rbby.dev
+          </div>
+          <div class="banner-background"></div>
         </div>
         <div class="hero flex-column-center container flex">
           <img class="profile-image" src="img/me250.jpg" />
