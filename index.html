@@ -5,6 +5,84 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <style>
+    :root {
+      --star-color: #fb8ad4;
+      --star-size: 100px;
+    }
+
+    :root {
+      cursor: url('img/ptr.svg') 0 0, auto !important;
+    }
+
+    a:hover {
+      cursor: url('img/ptr-click.svg') 0 0, auto !important;
+    }
+
+    .star-burst {
+      position: absolute;
+      width: var(--star-size);
+      height: var(--star-size);
+      z-index: 9999;
+      margin: 20px;
+      right: 2rem;
+      top: 2rem;
+    }
+
+    .star-burst .star {
+      background: var(--star-color);
+      width: var(--star-size);
+      height: var(--star-size);
+      position: absolute;
+      text-align: center;
+      top: 0;
+      left: 0;
+      animation: rotate 20s linear infinite;
+      /* Slower rotation */
+    }
+
+    .star-burst .star:before,
+    .star-burst .star:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: var(--star-size);
+      width: var(--star-size);
+      background: var(--star-color);
+    }
+
+    .star-burst .star:before {
+      transform: rotate(30deg);
+    }
+
+    .star-burst .star:after {
+      transform: rotate(60deg);
+    }
+
+    .star-burst .text {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 1.25rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(15deg);
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      /* Center align text */
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <style>
     .header {
       margin: 0 auto;
       /* left: 0; */
@@ -405,7 +483,13 @@
 
 <body>
   <div>
+
     <div class="font-family">
+
+      <div class="star-burst">
+        <div class="star"></div>
+        <div class="text">HIRE ME</div>
+      </div>
       <div>
         <div class="banner">
           <div class="banner-text">
@@ -414,6 +498,7 @@
           <div class="banner-background"></div>
         </div>
         <div class="hero flex-column-center container flex">
+
           <img class="profile-image" src="img/me250.jpg" />
           <h2 class="heading">Hello World</h2>
           <div class="grid">
