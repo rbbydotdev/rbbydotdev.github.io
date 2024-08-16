@@ -10,13 +10,16 @@
       --star-size: 100px;
     }
 
-    :root {
-      cursor: url('img/ptr.svg') 0 0, auto !important;
+    :root,
+    * {
+      cursor: url('img/skelhand.svg') 0 0, auto !important;
     }
 
-    a:hover {
-      cursor: url('img/ptr-click.svg') 0 0, auto !important;
+    .star-burst:hover {
+      transform: scale(2) translate(-20px, 20px);
+
     }
+
 
     .star-burst {
       position: absolute;
@@ -486,10 +489,12 @@
 
     <div class="font-family">
 
-      <div class="star-burst">
-        <div class="star"></div>
-        <div class="text">HIRE ME</div>
-      </div>
+      <a href="/resume">
+        <div class="star-burst">
+          <div class="star"></div>
+          <div class="text">HIRE ME</div>
+        </div>
+      </a>
       <div>
         <div class="banner">
           <div class="banner-text">
