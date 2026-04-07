@@ -364,6 +364,9 @@
       margin-top: 1em;
       margin-bottom: 1em;
       white-space: nowrap;
+      text-shadow:
+        0 0 10px rgba(0, 255, 195, 0.45),
+        0 0 22px rgba(0, 255, 195, 0.18);
     }
 
     @media screen and (min-width:576px) {
@@ -378,6 +381,11 @@
 
     .heading:after {
       content: ' ▌';
+      color: #00ffc3;
+      text-shadow:
+        0 0 8px rgba(0, 255, 195, 0.95),
+        0 0 18px rgba(0, 255, 195, 0.6),
+        0 0 32px rgba(0, 255, 195, 0.3);
       -webkit-animation: blink 2s step-start 0s infinite;
       animation: blink 2s step-start 0s infinite;
     }
@@ -578,6 +586,168 @@
     .project-github  { background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 50%, #6b6b6b 100%); }
     .project-gnata   { background: linear-gradient(135deg, #047a3a 0%, #0cd463 50%, #9ff6d6 100%); }
     .project-panels  { background: linear-gradient(135deg, #0a3f7a 0%, #1d77ef 55%, #81f3fd 100%); }
+
+    /* Blog feed section — continues the gradient flow from projects */
+    .blog-section {
+      position: relative;
+      padding: 100px 24px 120px;
+      background-image: url('img/confetti.svg'),
+        linear-gradient(to bottom, #2a0a5c 0%, #4a1078 45%, #1a0540 100%);
+      background-size: 900px auto, 100% 100%;
+      background-repeat: repeat, no-repeat;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .blog-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .blog-section .heading {
+      text-align: center;
+      color: #fff;
+      margin: 0 0 56px;
+    }
+
+    .blog-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .blog-card {
+      position: relative;
+      display: block;
+      padding: 28px 32px 28px 30px;
+      border-radius: 20px;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-left: 3px solid rgba(129, 243, 253, 0.9);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      backdrop-filter: blur(12px) saturate(140%);
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-left-color 0.25s ease;
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(129, 243, 253, 0.22), transparent 55%);
+      pointer-events: none;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.1);
+      border-left-color: #00ffc3;
+      box-shadow:
+        0 24px 44px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(0, 255, 195, 0.28),
+        0 0 32px -4px rgba(0, 255, 195, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.32);
+    }
+
+    .blog-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .blog-card h3 {
+      margin: 0 0 10px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      color: #eafdfb;
+      text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.35),
+        0 0 14px rgba(0, 255, 195, 0.42),
+        0 0 28px rgba(0, 255, 195, 0.18);
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .blog-card:hover h3 {
+      color: #81f3fd;
+      text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.35),
+        0 0 18px rgba(0, 255, 195, 0.75),
+        0 0 34px rgba(0, 255, 195, 0.35);
+    }
+
+    .blog-card p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.92;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: Menlo, monospace;
+      font-size: 12px;
+    }
+
+    .blog-meta time {
+      color: rgba(255, 255, 255, 0.78);
+      letter-spacing: 0.02em;
+    }
+
+    .blog-meta .sep {
+      color: rgba(129, 243, 253, 0.55);
+    }
+
+    .blog-meta .read-time {
+      color: #00ffc3;
+      background: rgba(0, 255, 195, 0.09);
+      border: 1px solid rgba(0, 255, 195, 0.38);
+      padding: 3px 10px;
+      border-radius: 99px;
+      letter-spacing: 0.02em;
+      text-shadow: none;
+    }
+
+    .blog-empty {
+      text-align: center;
+      font-family: Menlo, monospace;
+      font-size: 14px;
+      opacity: 0.7;
+      padding: 40px 0;
+    }
+
+    .blog-skeleton {
+      height: 140px;
+      border-radius: 20px;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.12) 50%,
+        rgba(255, 255, 255, 0.05) 100%
+      );
+      background-size: 200% 100%;
+      animation: blog-shimmer 1.6s ease-in-out infinite;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes blog-shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-card { transition: none; }
+      .blog-skeleton { animation: none; }
+    }
   </style>
 
   <link rel="manifest" href="favicons/manifest.json" />
@@ -829,8 +999,71 @@
           </div>
         </div>
       </section>
+
+      <section class="blog-section">
+        <div class="blog-inner">
+          <h2 class="heading">tail -f ~/blog</h2>
+          <div class="blog-feed" id="blog-feed">
+            <div class="blog-skeleton"></div>
+            <div class="blog-skeleton"></div>
+            <div class="blog-skeleton"></div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var feed = document.getElementById('blog-feed');
+      if (!feed) return;
+
+      function escapeHtml(s) {
+        var d = document.createElement('div');
+        d.textContent = s == null ? '' : String(s);
+        return d.innerHTML;
+      }
+
+      function formatDate(s) {
+        var d = new Date(s);
+        if (isNaN(d.getTime())) return '';
+        return d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      }
+
+      function renderEmpty(msg) {
+        feed.innerHTML = '<p class="blog-empty">' + escapeHtml(msg) + '</p>';
+      }
+
+      fetch('https://blog.rbby.dev/index.json', { mode: 'cors' })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          var posts = (data && data.posts) || [];
+          if (!posts.length) {
+            renderEmpty('No posts yet.');
+            return;
+          }
+          feed.innerHTML = posts.map(function (p) {
+            return (
+              '<a href="' + escapeHtml(p.url) + '" class="blog-card" rel="nofollow">' +
+                '<h3>' + escapeHtml(p.title) + '</h3>' +
+                '<p>' + escapeHtml(p.summary) + '</p>' +
+                '<div class="blog-meta">' +
+                  '<time datetime="' + escapeHtml(p.date) + '">' + escapeHtml(formatDate(p.date)) + '</time>' +
+                  '<span class="sep">·</span>' +
+                  '<span class="read-time">' + escapeHtml(p.readingTime) + ' min read</span>' +
+                '</div>' +
+              '</a>'
+            );
+          }).join('');
+        })
+        .catch(function () {
+          renderEmpty('Could not load blog posts. Visit blog.rbby.dev directly.');
+        });
+    })();
+  </script>
 </body>
 
 
