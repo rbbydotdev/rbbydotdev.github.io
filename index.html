@@ -921,6 +921,21 @@
   <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
   <link rel="yandex-tableau-widget" href="/favicons/yandex-browser-manifest.json" />
   <title data-react-helmet="true">Robby Polana - Full-Stack Web Application Engineer</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rbby.dev/" />
+  <meta property="og:title" content="Robby Polana - Full-Stack Web Application Engineer" />
+  <meta property="og:description" content="Full-stack web application engineer. Building on the web since before the web was cool." />
+  <meta property="og:image" content="https://rbby.dev/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="rbby.dev — Robby Polana, full-stack web application engineer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://rbby.dev/" />
+  <meta name="twitter:title" content="Robby Polana - Full-Stack Web Application Engineer" />
+  <meta name="twitter:description" content="Full-stack web application engineer. Building on the web since before the web was cool." />
+  <meta name="twitter:image" content="https://rbby.dev/img/og-image.png" />
+  <meta name="twitter:image:alt" content="rbby.dev — Robby Polana, full-stack web application engineer" />
   <style id="gatsby-inlined-css"></style>
 
 
@@ -1239,7 +1254,7 @@
           return r.json();
         })
         .then(function (data) {
-          var posts = (data && data.posts) || [];
+          var posts = ((data && data.posts) || []).slice(0, 3);
           if (!posts.length) {
             renderEmpty('No posts yet.');
             return;
