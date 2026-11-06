@@ -600,6 +600,37 @@
     }
 
     /* Card color variants — reuse the existing app-icon palette */
+    /* edx0 uses its own palette: panel #131419 with brand lime #b8ff2f */
+    .project-edx0 {
+      background: #131419;
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 2px #b8ff2f;
+    }
+
+    .project-edx0:hover {
+      box-shadow:
+        0 24px 44px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 2px #b8ff2f;
+    }
+
+    .project-edx0::before {
+      opacity: 0.35;
+    }
+
+    .project-edx0 h3 {
+      color: #b8ff2f;
+    }
+
+    .project-edx0 .project-icon {
+      background: rgba(184, 255, 47, 0.16);
+      border-color: rgba(184, 255, 47, 0.34);
+    }
+
+    .project-edx0 .project-icon svg {
+      stroke: #b8ff2f;
+    }
+
     .project-someday {
       background: linear-gradient(135deg, #9221ff 0%, #c44bd9 50%, #fb8ad4 100%);
     }
@@ -1083,6 +1114,23 @@
         <div class="projects-inner">
           <h2 class="heading">ls ./projects</h2>
           <div class="projects-grid">
+
+            <a rel="nofollow" href="https://edx0.dev" class="project-card project-edx0">
+              <div class="project-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </div>
+              <h3>edx0</h3>
+              <p>Instant dev containers, running directly in the browser. No server required. Next.js, Astro, WordPress,
+                Python — the actual projects, in a tab.</p>
+              <div class="project-meta">
+                <span class="lang">edx0.dev</span>
+              </div>
+            </a>
 
             <a rel="nofollow" href="https://github.com/rbbydotdev/spac" class="project-card project-spac">
               <div class="project-icon">
