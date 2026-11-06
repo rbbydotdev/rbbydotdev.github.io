@@ -687,13 +687,12 @@
     .blog-card {
       position: relative;
       display: block;
-      padding: 28px 32px 28px 30px;
+      padding: 28px 32px 28px 32px;
       border-radius: 20px;
       color: #fff;
       text-decoration: none;
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-left: 3px solid rgba(129, 243, 253, 0.9);
       -webkit-backdrop-filter: blur(12px) saturate(140%);
       backdrop-filter: blur(12px) saturate(140%);
       box-shadow:
@@ -701,7 +700,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.22);
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
       overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-left-color 0.25s ease;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
     }
 
     .blog-card::before {
@@ -712,10 +711,26 @@
       pointer-events: none;
     }
 
+    /* Straight accent bar inside the card, clear of the rounded corners */
+    .blog-card::after {
+      content: '';
+      position: absolute;
+      top: 28px;
+      bottom: 28px;
+      left: 14px;
+      width: 3px;
+      background: rgba(129, 243, 253, 0.9);
+      pointer-events: none;
+      transition: background 0.25s ease;
+    }
+
+    .blog-card:hover::after {
+      background: #00ffc3;
+    }
+
     .blog-card:hover {
       transform: translateY(-4px);
       background: rgba(255, 255, 255, 0.1);
-      border-left-color: #00ffc3;
       box-shadow:
         0 24px 44px rgba(0, 0, 0, 0.45),
         0 0 0 1px rgba(0, 255, 195, 0.28),
